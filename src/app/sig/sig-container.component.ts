@@ -9,7 +9,7 @@ import {SigChildComponent} from './sig-child.component';
   ],
   template: `
     <div style="border: 2px solid blue">
-      Signal
+      Signal <button (dblclick)="ondblclick()">test</button>
       <hr>
       <p> {{ name() }} &nbsp;{{ count }}</p>
       <hr>
@@ -26,4 +26,7 @@ export class SigContainerComponent {
    return this.render++;
   }
   readonly name = input.required<string>();
+  protected ondblclick() {
+    console.log('dblclick')
+  }
 }

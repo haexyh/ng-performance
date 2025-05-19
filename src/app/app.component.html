@@ -1,21 +1,28 @@
-<app-sig-container [name]="nameSig()">
-  <div>
-    child Sig
-    <app-sig-child></app-sig-child>
-  </div>
-  <div>
-    child obs
-    <app-obs-child></app-obs-child>
-  </div>
-</app-sig-container>
 
-<app-obs-container [name]="(nameObs$| async) ?? ''">
-  <div>
-    child obs
-    <app-obs-child></app-obs-child>
-  </div>
-  <div>
-    child Sig
-    <app-sig-child></app-sig-child>
-  </div>
-</app-obs-container>
+
+    <app-sig-container [name]="nameSig()">
+      <div>
+        child Sig
+        <app-sig-child></app-sig-child>
+      </div>
+      <div>
+        child obs
+        <app-obs-child></app-obs-child>
+      </div>
+    </app-sig-container>
+    <br>
+    <app-obs-container [name]="(nameObs$| async) ?? ''">
+      <div>
+        child obs
+        <app-obs-child></app-obs-child>
+      </div>
+      <div>
+        child Sig
+        <app-sig-child></app-sig-child>
+      </div>
+    </app-obs-container>
+
+    <br>
+    <app-old-container [name]="(nameObs$| async) ?? ''">
+    </app-old-container>
+

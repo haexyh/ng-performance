@@ -11,7 +11,7 @@ import {ObsChildComponent} from './obs-child.component';
   ],
   template: `
     <div style="border: 2px solid rebeccapurple">
-      Observable
+      Observable <button (dblclick)="ondblclick()">test</button>
       <p> {{ (name$ | async) }} &nbsp;{{ count }}</p>
       <hr>
       <app-obs-child></app-obs-child>
@@ -31,5 +31,9 @@ export class ObsContainerComponent {
   @Input({required: true}) set name(value: string)
   {
     this.name$.next(value)
+  }
+
+  protected ondblclick() {
+    console.log('dblclick')
   }
 }

@@ -10,8 +10,6 @@ import {ChangeDetectionStrategy, Component, input, signal} from '@angular/core';
     </div>
     @if (click() > 0) {
       <app-sig-child></app-sig-child>
-    } @else {
-
     }
   `,
   styles: ``,
