@@ -1,14 +1,17 @@
 import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 import {ReplaySubject, startWith} from 'rxjs';
+import {AsyncPipe} from '@angular/common';
 
 @Component({
   selector: 'app-obs-child',
-  imports: [],
+  imports: [
+    AsyncPipe
+  ],
   template: `
     <div>
       @let cnt = count;
       Child {{cnt}}
-      <button (click)="onClick(cnt)" >Click</button>
+      <button (click)="onClick(cnt)" >Click {{clickView$| async}}</button>
     </div>
   `,
   styles: ``,

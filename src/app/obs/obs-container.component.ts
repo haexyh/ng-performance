@@ -1,19 +1,23 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {ReplaySubject, Subject} from 'rxjs';
 import {AsyncPipe} from '@angular/common';
+import {ObsChildComponent} from './obs-child.component';
 
 @Component({
   selector: 'app-obs-container',
   imports: [
-    AsyncPipe
+    AsyncPipe,
+    ObsChildComponent
   ],
   template: `
     <div style="border: 2px solid rebeccapurple">
       Observable
-      <p> {{ name$ | async}} &nbsp;{{count}}</p>
+      <p> {{ (name$ | async) }} &nbsp;{{ count }}</p>
       <hr>
-      <ng-content></ng-content>
+      <app-obs-child></app-obs-child>
     </div>
+
+    <ng-content></ng-content>
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush

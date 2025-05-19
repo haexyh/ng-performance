@@ -6,8 +6,13 @@ import {ChangeDetectionStrategy, Component, input, signal} from '@angular/core';
   template: `
     <div>
       Child {{count}}
-      <button (click)="onClick()" >Click</button>
+      <button (click)="onClick()" >Click {{click()}}</button>
     </div>
+    @if (click() > 0) {
+      <app-sig-child></app-sig-child>
+    } @else {
+
+    }
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush
