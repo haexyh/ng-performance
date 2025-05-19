@@ -1,28 +1,49 @@
 
 
     <app-sig-container [name]="nameSig()">
-      <div>
+      <div style="background-color: rebeccapurple">
         child Sig
         <app-sig-child></app-sig-child>
       </div>
-      <div>
+      <div style="background-color: blue">
         child obs
         <app-obs-child></app-obs-child>
+      </div>
+      <div style="background-color: yellow">
+        child old
+        <app-old-child></app-old-child>
       </div>
     </app-sig-container>
     <br>
     <app-obs-container [name]="(nameObs$| async) ?? ''">
-      <div>
+      <div style="background-color: rebeccapurple">
+        child Sig
+        <app-sig-child></app-sig-child>
+      </div>
+      <div style="background-color: blue">
         child obs
         <app-obs-child></app-obs-child>
       </div>
-      <div>
-        child Sig
-        <app-sig-child></app-sig-child>
+      <div style="background-color: yellow">
+        child old
+        <app-old-child></app-old-child>
       </div>
     </app-obs-container>
 
     <br>
     <app-old-container [name]="(nameObs$| async) ?? ''">
+
+      <div style="background-color: rebeccapurple">
+        child Sig
+        <app-sig-child></app-sig-child>
+      </div>
+      <div style="background-color: blue">
+        child obs
+        <app-obs-child></app-obs-child>
+      </div>
+      <div style="background-color: yellow">
+        child old
+        <app-old-child></app-old-child>
+      </div>
     </app-old-container>
 

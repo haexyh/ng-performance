@@ -8,7 +8,7 @@ import {SigChildComponent} from './sig-child.component';
     SigChildComponent
   ],
   template: `
-    <div style="border: 2px solid blue">
+    <div style="border: 4px solid rebeccapurple">
       Signal <button (dblclick)="ondblclick()">test</button>
       <hr>
       <p> {{ name() }} &nbsp;{{ count }}</p>

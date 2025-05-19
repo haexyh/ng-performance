@@ -10,7 +10,7 @@ import {ObsChildComponent} from './obs-child.component';
     ObsChildComponent
   ],
   template: `
-    <div style="border: 2px solid rebeccapurple">
+    <div style="border: 4px solid blue">
       Observable <button (dblclick)="ondblclick()">test</button>
       <p> {{ (name$ | async) }} &nbsp;{{ count }}</p>
       <hr>

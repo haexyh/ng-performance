@@ -7,7 +7,7 @@ import {OldChildComponent} from './old-child.component';
     OldChildComponent
   ],
   template: `
-    <div style="border: 2px solid greenyellow">
+    <div style="border: 4px solid yellow">
       Old <button (dblclick)="ondblclick()">test</button>
       <hr>
       <p> {{ name }} &nbsp;{{ count }}</p>

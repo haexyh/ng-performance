@@ -8,10 +8,11 @@ import {SigChildComponent} from './sig/sig-child.component';
 import {ObsChildComponent} from './obs/obs-child.component';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {OldContainerComponent} from './old/old-container.component';
+import {OldChildComponent} from './old/old-child.component';
 
 @Component({
   selector: 'app-root',
-  imports: [SigContainerComponent, ObsContainerComponent, FormsModule, AsyncPipe, SigChildComponent, ObsChildComponent, OldContainerComponent],
+  imports: [SigContainerComponent, ObsContainerComponent, FormsModule, AsyncPipe, SigChildComponent, ObsChildComponent, OldContainerComponent, OldChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
